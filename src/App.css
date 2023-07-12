@@ -1,38 +1,237 @@
-.App {
-  text-align: center;
+.App{
+  max-width: 1200px;
+  margin: auto;
+  background-color: #22212110;
+  backdrop-filter:blur(2px);
+  background-image: url(./assets/splashbackground.avif);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+/* Header Component */
+header{
+  height: 70px;
+  padding: 10px;
+  border-bottom: 1px solid #F2EBE9;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba(77, 158, 243,.5);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.logo{
+  display: flex;
+  align-items: center;
+}
+.logo img{
+  max-width: 40px;
+}
+
+.logo span{
+  font-size: 20px;
+  padding: 5px;
+}
+
+.nav{
+  display: flex;
+  align-items: center;
+}
+
+.nav .link{
+  padding: 10px;
+}
+
+.nav .link.active{
+  background-color: #F2EBE9;
+  border-radius: 5px;
+}
+
+.nav .auth{
+  border: 0px;
+  border-radius: 5px;
+  margin-left: 10px;
+  padding: 10px;
+  font-size: 16px;
+  background-color: #1C59AE;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.nav .auth i{
+  font-size: 14px;
+}
+
+@media screen and (max-width: 480px) {
+  .logo span{
+      display: none;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.homePa{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  
+}
+
+/* Card Component */
+.card{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: #F2EBE9 0px 1px 4px;
+  margin: 20px 5px;
+  background-color: rgba(0, 0, 0, 0.7);
+  max-width: 22rem;
+  
+
+}
+h1{
+  color:#e8eaec;
+}
+
+.card .titleandescription{
   display: flex;
   flex-direction: column;
   align-items: center;
+  
+ 
+}
+
+.card .title{
+  font-size: 20px;
+  margin: 20px 5px;
+  font-weight: 600;
+  color: #e8eaec;
+}
+
+.card .description{
+  font-size: 16px;
+  margin: 20px 5px;
+  color: #e8eaec;
+  word-break: break-all;
+}
+
+.card .control {
+  font-size: 16px;
+  margin: 20px 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #0F539D;
+  max-width: 20rem;
+
+}
+.picandname{
+  display:flex ;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.card .author {
+  font-size: 14px;
+  font-weight: 500;
+  background-color: #1c59ae13;
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: #0F539D;
+}
+  .userpic{
+  width: 2em;
+  height: 2em;
+  border-radius: 50%;
+  border: 2px solid #EEA47F;;
+}
+.card .delete{
+  color: #ef1313;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+/* Create Blog Post Component */
+.create .heading{
+  text-align: center;
+  font-size: 22px;
+  margin-top: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.createPost{
+  display: flex;
+  flex-direction: column;
+  max-width: 700px;
+  margin: 20px auto;
+}
+
+.createPost .title{
+  font-size: 20px;
+  margin: 10px 0px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 0px;
+  box-shadow: #F2EBE9 0px 1px 4px;
+
+}
+
+.createPost .description{
+  font-size: 20px;
+  margin: 10px 0px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 0px;
+  box-shadow: #F2EBE9 0px 1px 4px;
+  height: 300px;
+}
+
+.createPost button{
+  font-size: 18px;
+  margin: 10px 0px;
+  padding: 15px 20px;
+  background-color: #5FD068;
+  border: 0px;
+  border-radius: 5px;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+
+/* Page Not Found  */
+.pageNotFound{
+  text-align: center;
+  max-width: 500px;
+  margin: auto;
+}
+
+.pageNotFound p {
+  font-size: 24px;
+  font-weight: 500;
+  margin: 25px auto;
+}
+
+.pageNotFound img {
+  border-radius: 5px;
+  width: 100%;
+  margin: 15px auto;
+}
+
+.pageNotFound button{
+  border: 0px;
+  border-radius: 5px;
+  margin-left: 10px;
+  padding: 10px 20px;
+  font-size: 20px;
+  background-color: #1C59AE;
+  color: #ffffff;
+  cursor: pointer;
+}
+input,textarea{
+  outline: none!important;
+  background-color: rgba(232, 234, 236,.6); 
+}
+
+
+/* Footer Component  */
+footer{
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(116, 117, 119,.7);
+  border-top: 1px solid #F2EBE9;
 }
